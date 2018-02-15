@@ -1,4 +1,5 @@
-$(document).ready(function() {
+(function() {
+
 
   let btnForecast = $('.forecast');
   let temperature = $('.temperature');
@@ -65,30 +66,28 @@ $(document).ready(function() {
   
   }
 
-  const backgroundbody =()=> {
-    const proxy = 'https://cors-anywhere.herokuapp.com/';
-    const url = `https://api.flickr.com/services/feeds/photos_public.gne?format=json&tags="landscapes"&api_key=4723d78d1d4ae324fe34315b643fd01f`;
-      $.ajax({
-        url: proxy + url,
-        success:backgroundbody_s
-       
+//Fondo de pantalla usando Flicker
+ /* const backgroundbody =()=> {
+    let flickerAPI = "https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+    $.getJSON( flickerAPI, {
+      tags: "landscapes",
+      tagmode: "any",
+      format: "json"
+    })
+      .done(function( data ) {
+          console.log(data);
+        $.each( data.items, function( i, item ) {
+            $("body").css("background-image", `url(${item.media.m})`);
+
+          $( "<img>" ).attr( "src", item.media.m ).appendTo( "#images" );
+          if ( i === 2 ) {
+            return false;
+          }
+        });
       });
-    
-  }
-
-  function backgroundbody_s(rsp){
-    var apiKey =  '4723d78d1d4ae324fe34315b643fd01f' ;
-	// $ . getJSON ( ' http://api.flickr.com/services/rest/?&method=flickr.photosets.getPhotos&api_key= '  + apiKey +  ' & amp; photoset_id = 72157619415192530 & amp; format = json & amp; jsoncallback =? ' ,
-
-  //     // for (var i=0; i<rsp.items.length; i++){
-  //     //   var blog = rsp.items[i];
-  //     //   var div = document.createElement('div');
-  //     //   var txt = document.createTextNode(blog.name);
-  //     //   div.appendChild(txt);
-  //     //   document.body.appendChild(div);
-  //     // }
     }
+      backgroundbody(); */
+    
   
-  backgroundbody();
   searchPosition();
-});
+})();
