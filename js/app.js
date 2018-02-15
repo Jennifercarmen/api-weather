@@ -1,5 +1,6 @@
 (function() {
 
+  $(".button-collapse").sideNav();
 
   let btnForecast = $('.forecast');
   let temperature = $('.temperature');
@@ -53,13 +54,12 @@
     const week = data.daily.data;
     week.length=7;
     week.forEach((value, index) => {
-      let html = `<div class = "row">
-      <div class="col-xs-2"></div>
-    <div class="col-xs-10"><img class="imgindex" src="../assets/images/${value.icon}.png"></div>
-    <div class="col-xs-2"></div>
-    <div class="col-xs-3"><p>${days[index]}</p></div>
-    <div class="col-xs-2"><p>MIN-${value.temperatureMin}°</p></div>
-    <div class="col-xs-2"><p>MAX-${value.temperatureMax}°</p></div>
+      let html = `
+      <div class = "col s6 separation">
+      <img class="imgindex" src="../assets/images/${value.icon}.png">
+      <p>${days[index]}</p>
+      <p>MIN-${value.temperatureMin}°</p>
+      <p>MAX-${value.temperatureMax}°</p>
     </div>`;
     box_Week.append(html);
     });

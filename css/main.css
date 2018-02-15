@@ -9,17 +9,19 @@ body{
   -o-background-size: cover;
   background-size: cover;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 16px;
   color: white;
 
 }
-
+nav {
+  background-color: transparent;
+}
 html, body {
   min-height: 100%;
 }
 .box-weather {
-  background-color: #4e444447;
-  padding: 40px 0px;
+  background-color: #02020285;
+  height: 110vh;
 }
 p {
   margin: 0 0 10px;
@@ -30,6 +32,14 @@ p {
   color: gray;
   font-weight: bold;
   text-align: center;
+}
+.weather {
+  background-color: darkturquoise;
+  color: white;
+  font-size: 16px;
+}
+.separation {
+  margin-bottom: 1rem;
 }
 @media (min-width: 700px) {
   .imgindex {

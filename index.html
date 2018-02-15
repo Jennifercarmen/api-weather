@@ -5,91 +5,125 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="vendors/bootstrap/css/bootstrap.css">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="css/main.css">
   <title>Weather</title>
 </head>
 
 <body>
-  <br>
-
-  <br>
-  <br>
-
   <section class="box-weather">
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo">Lima,Perú</a>
+        <a href="#" data-activates="mobile-demo" class="button-collapse">
+          <i class="material-icons">menu</i>
+        </a>
+        <ul class="right hide-on-med-and-down">
+          <li>
+            <a>Calificar</a>
+          </li>
+          <li>
+            <a href="views/home.html">Semana climatica</a>
+          </li>
+          <li>
+            <a>Obtener version completa</a>
+          </li>
+
+        </ul>
+        <ul class="side-nav" id="mobile-demo">
+            <li class="weather">
+                <a >Weather</a>
+              </li>
+          <li>
+            <a>Calificar</a>
+          </li>
+          <li>
+            <a href="views/home.html">Semana climatica</a>
+          </li>
+          <li>
+            <a>Obtener version completa</a>
+          </li>
+
+        </ul>
+      </div>
+    </nav>
+    <br>
+    <br>
     <div class="container">
-    <div class="row">
+      <div class="row">
 
-        <div class="col-xs-4">
-  </div>
-  <img class="imgindex" src="">
+        <div class="col s4 col m4">
+        </div>
+        <img class="imgindex" src="">
 
-  </div>
-  <div class="row">
-    <div class="col-xs-4"></div>
-      <div class="col-xs-4">
+      </div>
+      <div class="row">
+        <div class="col s4 col m4"></div>
+        <div class="col s4 col m4">
           <h2 class="temperature"></h2>
         </div>
-        <div class="col-xs-4"></div>
+        <div class="col s4 col m4"></div>
 
       </div>
- <div class="container">
-      <div class="row">
-        <div class="col-xs-2"></div>
-          <div class="col-xs-4">
-              <p>Wind</p>
-            </div>
-        <div class="col-xs-4" id="wind"></div>
-        <div class="col-xs-2"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col s2 col m2"></div>
+          <div class="col s4 col m4">
+            <p>Wind</p>
+          </div>
+          <div class="col s4 col m4" id="wind"></div>
+          <div class="col s2 col m2"></div>
 
-      </div>
-      <div class="row">
-          <div class="col-xs-2"></div>
-        <div class="col-xs-4">
-          <p>Humidity</p>
         </div>
-        <div class="col-xs-4" id="humidity"></div>
-        <div class="col-xs-2"></div>
+        <div class="row">
+          <div class="col s2 col m2"></div>
+          <div class="col s4 col m4">
+            <p>Humidity</p>
+          </div>
+          <div class="col s4 col m4" id="humidity"></div>
+          <div class="col s2 col m2"></div>
 
-      </div>
-      <div class="row">
-          <div class="col-xs-2"></div>
-
-        <div class="col-xs-4">
-          <p>UV Index</p>
         </div>
-        <div class="col-xs-4" id="uvindex"></div>
-        <div class="col-xs-2"></div>
+        <div class="row">
+          <div class="col s2 col m2"></div>
 
-      </div>
-      <div class="row">
-          <div class="col-xs-2"></div>
+          <div class="col s4 col m4">
+            <p>UV Index</p>
+          </div>
+          <div class="col s4 col m4" id="uvindex"></div>
+          <div class="col s2 col m2"></div>
 
-        <div class="col-xs-4">
-          <p>Pressure</p>
         </div>
-        <div class="col-xs-4" id="pressure"></div>
-        <div class="col-xs-2"></div>
+        <div class="row">
+          <div class="col s2 col m2"></div>
 
+          <div class="col s4 col m4">
+            <p>Pressure</p>
+          </div>
+          <div class="col s4 col m4" id="pressure"></div>
+          <div class="col s2 col m2"></div>
+
+        </div>
+        <div class="row">
+          <div class="col s2 col m2"></div>
+          <button class=" col s8 col m8 btn forecast btn-primary">Pronostico de la semana</button>
+          <div class="col s2 col m2"></div>
+
+        </div>
       </div>
-      <div class="row">
-          <div class="col-xs-2"></div>
-          <button class=" col-xs-8 btn forecast btn-primary">Pronostico de la semana</button>
-          <div class="col-xs-2"></div>
-    
-      </div>
+
+
     </div>
-
-
-  </div>
-</div>
+    </div>
   </section>
 
   <!-- link jQuery CDN -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <!-- link bootstrap minificado -->
-  <script type="text/javascript" src="vendors/bootstrap/js/bootstrap.min.js"></script>
-<!-- link aapp-->
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <!-- link aapp-->
   <script src="js/app.js"></script>
 </body>
 
