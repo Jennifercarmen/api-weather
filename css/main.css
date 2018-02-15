@@ -1,3 +1,38 @@
 .imgindex {
   width: 30%;
 }
+body{
+  background-image: url('../assets/images/back.PNG');
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-weight: bold;
+  font-size: 14px;
+  color: white;
+
+}
+
+html, body {
+  min-height: 100%;
+}
+.box-weather {
+  background-color: #4e444447;
+  padding: 40px 0px;
+}
+p {
+  margin: 0 0 10px;
+  font-weight: bold;
+}
+.title{
+  background-color: white;
+  color: gray;
+  font-weight: bold;
+  text-align: center;
+}
+@media (min-width: 700px) {
+  .imgindex {
+    width: 150px;
+  }
+}

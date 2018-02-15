@@ -36,6 +36,7 @@ $(document).ready(function() {
     }
   }
   const getforecast=(data) => {
+    console.log(data);
     // view 1 today
 
     let today = data.currently;
@@ -52,16 +53,42 @@ $(document).ready(function() {
     week.length=7;
     week.forEach((value, index) => {
       let html = `<div class = "row">
-    <div ><img class="imgindex" src="../assets/images/${value.icon}.png"></div>
-    <div ><p>${days[index]}</p></div>
-    <div><p>${value.temperatureMin}° - </p></div>
-    <div><p>${value.temperatureMax}°</p></div>
+      <div class="col-xs-2"></div>
+    <div class="col-xs-10"><img class="imgindex" src="../assets/images/${value.icon}.png"></div>
+    <div class="col-xs-2"></div>
+    <div class="col-xs-3"><p>${days[index]}</p></div>
+    <div class="col-xs-2"><p>MIN-${value.temperatureMin}°</p></div>
+    <div class="col-xs-2"><p>MAX-${value.temperatureMax}°</p></div>
     </div>`;
     box_Week.append(html);
     });
   
   }
+
+  const backgroundbody =()=> {
+    const proxy = 'https://cors-anywhere.herokuapp.com/';
+    const url = `https://api.flickr.com/services/feeds/photos_public.gne?format=json&tags="landscapes"&api_key=4723d78d1d4ae324fe34315b643fd01f`;
+      $.ajax({
+        url: proxy + url,
+        success:backgroundbody_s
+       
+      });
+    
+  }
+
+  function backgroundbody_s(rsp){
+    var apiKey =  '4723d78d1d4ae324fe34315b643fd01f' ;
+	// $ . getJSON ( ' http://api.flickr.com/services/rest/?&method=flickr.photosets.getPhotos&api_key= '  + apiKey +  ' & amp; photoset_id = 72157619415192530 & amp; format = json & amp; jsoncallback =? ' ,
+
+  //     // for (var i=0; i<rsp.items.length; i++){
+  //     //   var blog = rsp.items[i];
+  //     //   var div = document.createElement('div');
+  //     //   var txt = document.createTextNode(blog.name);
+  //     //   div.appendChild(txt);
+  //     //   document.body.appendChild(div);
+  //     // }
+    }
+  
+  backgroundbody();
   searchPosition();
-
-
 });
