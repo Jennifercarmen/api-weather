@@ -78,8 +78,6 @@
           console.log(data);
         $.each( data.items, function( i, item ) {
             $("body").css("background-image", `url(${item.media.m})`);
-
-          $( "<img>" ).attr( "src", item.media.m ).appendTo( "#images" );
           if ( i === 2 ) {
             return false;
           }

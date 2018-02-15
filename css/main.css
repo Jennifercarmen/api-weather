@@ -2,7 +2,7 @@
   width: 30%;
 }
 body{
-  background-image: url('../assets/images/back.PNG');
+  background-image: url(https://source.unsplash.com/random);
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
