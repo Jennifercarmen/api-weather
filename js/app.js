@@ -47,9 +47,21 @@ $(document).ready(function() {
     pressure.text(today.pressure + 'hPa');
     temperature.text(today.temperature + '°');
 
-  
+    // view semana
+    const week = data.daily.data;
+    week.length=7;
+    week.forEach((value, index) => {
+      let html = `<div class = "row">
+    <div ><img class="imgindex" src="../assets/images/${value.icon}.png"></div>
+    <div ><p>${days[index]}</p></div>
+    <div><p>${value.temperatureMin}° - </p></div>
+    <div><p>${value.temperatureMax}°</p></div>
+    </div>`;
+    box_Week.append(html);
+    });
   
   }
   searchPosition();
+
 
 });
